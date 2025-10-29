@@ -1,6 +1,6 @@
-# Grokipedia vs Wikipedia: Content Divergence Analysis
+# Grokipedia vs Wikipedia, a Content Divergence Analysis
 
-## Overview
+## Why
 
 I was curious to see how similar or dissimilar Grokipedia is from Wikipedia. These results do not make claims about the content being better or worse between either platform—simply, how different are they?
 
@@ -32,7 +32,7 @@ UMAP dimensionality reduction projects the 384-dimensional embeddings into 2D sp
 
 Points are colored by similarity score (red = divergent, green = similar).
 
-**Important:** Visual distance reflects thematic clustering; color indicates content similarity. A topic pair can be spatially close (similar theme) but different in color (different coverage).
+Visual distance reflects thematic clustering; color indicates content similarity. A topic pair can be spatially close (similar theme) but different in color (different coverage).
 
 ---
 
