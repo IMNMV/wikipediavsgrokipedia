@@ -1,20 +1,38 @@
-Grokipedia vs Wikipedia
+# Grokipedia vs Wikipedia: Content Divergence Analysis
 
-Simply, I was curious to see how similar/disimilar Grokipedia is from Wikipedia. 
+## Overview
 
-These results do not make claims about the content being better or worse between either platform - simply, how different are they?
+I was curious to see how similar or dissimilar Grokipedia is from Wikipedia. These results do not make claims about the content being better or worse between either platform—simply, how different are they?
 
-Methodology
+## Methodology
 
-Data: Full article text scraped from both platforms for 211 topics (Claude Sonnet 4.5 did webscrape on large amounts of controversial/news worthy sources. I added some additional topics I thought were missing from its initial list.
+### Data Collection
 
-Embeddings: Each article encoded using all-MiniLM-L6-v2 sentence transformer (this creates 384-dimensional vectors). I've had decent work done with BERTopic model using this embedding model, and given my desire for good contextual awareness, I went with a transformer based approach rather
-than a simpler approach such as word2vec.
+Full article text scraped from both platforms for 211 topics. Claude Sonnet 4.5 performed initial web scraping on controversial and newsworthy sources. I manually added additional topics that were missing from its initial list.
 
-Similarity: Pairwise cosine similarity computed between Grokipedia and Wikipedia embeddings for each topic. Range: 0 (completely different) to 1 (identical).
+### Embeddings
 
-Visualization: UMAP dimensionality reduction projects 384D embeddings to 2D (n_neighbors=15, min_dist=0.1, cosine metric). Points are colored by similarity score (red=divergent, green=similar).
+Each article was encoded using the **all-MiniLM-L6-v2** sentence transformer, which creates 384-dimensional vectors. I selected this model based on prior work with BERTopic, where it demonstrated strong performance. Given my need for good contextual awareness, I opted for a transformer-based approach rather than simpler methods like word2vec.
 
-Note: Visual distance reflects thematic clustering; color indicates content similarity. A topic pair can be spatially close (similar theme) but different in color (different coverage).
+### Similarity Measurement
 
-Data available upon request.
+Pairwise cosine similarity was computed between Grokipedia and Wikipedia embeddings for each topic.
+
+- **Range:** 0 (completely different) to 1 (identical)
+- **Interpretation:** Higher values indicate greater semantic alignment
+
+### Visualization
+
+UMAP dimensionality reduction projects the 384-dimensional embeddings into 2D space for visualization.
+
+**Parameters:**
+- `n_neighbors = 15`
+- `min_dist = 0.1`
+- `metric = "cosine"`
+
+Points are colored by similarity score (red = divergent, green = similar).
+
+**Important:** Visual distance reflects thematic clustering; color indicates content similarity. A topic pair can be spatially close (similar theme) but different in color (different coverage).
+
+---
+
