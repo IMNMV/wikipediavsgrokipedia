@@ -1,5 +1,7 @@
 # Grokipedia vs Wikipedia, a Content Divergence Analysis
 
+https://nykkovitali.com/wikipediavsgrokipedia/index.html
+
 ## Why
 
 I was curious to see how similar or dissimilar Grokipedia is from Wikipedia. These results do not make claims about the content being better or worse between either platform—simply, how different are they?
