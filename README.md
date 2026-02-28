@@ -1,6 +1,6 @@
 # Grokipedia vs Wikipedia, a Content Divergence Analysis
 
-## Click here to view the interactive web-page: https://nykkovitali.com/wikipediavsgrokipedia/index.html
+## Click here to view the interactive webpage: https://imnmv.github.io/wikipediavsgrokipedia/index.html
 
 ## Why
 
